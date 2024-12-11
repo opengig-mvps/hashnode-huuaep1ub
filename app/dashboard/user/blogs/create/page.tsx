@@ -69,14 +69,6 @@ const BlogCreationPage: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    const subscription = watch((value: BlogFormData) => {
-      autoSaveDraft(value);
-    });
-
-    return () => subscription.unsubscribe();
-  }, [watch]);
-
   return (
     <div className="flex-1 p-8">
       <h2 className="text-2xl font-bold mb-6">Create New Blog</h2>
